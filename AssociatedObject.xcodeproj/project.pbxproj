@@ -10,6 +10,8 @@
 		87339EC71D3AE5D50049CAEF /* AssociatedObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 87339EC61D3AE5D50049CAEF /* AssociatedObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87339ECE1D3AE5D50049CAEF /* AssociatedObject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87339EC31D3AE5D50049CAEF /* AssociatedObject.framework */; };
 		87339ED31D3AE5D50049CAEF /* AssociatedObjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87339ED21D3AE5D50049CAEF /* AssociatedObjectTests.swift */; };
+		87339EDE1D3AE7770049CAEF /* AssociatedObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87339EDD1D3AE7770049CAEF /* AssociatedObject.swift */; };
+		87339EE01D3AEFC60049CAEF /* Retainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87339EDF1D3AEFC60049CAEF /* Retainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		87339ECD1D3AE5D50049CAEF /* AssociatedObjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssociatedObjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87339ED21D3AE5D50049CAEF /* AssociatedObjectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssociatedObjectTests.swift; sourceTree = "<group>"; };
 		87339ED41D3AE5D50049CAEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87339EDD1D3AE7770049CAEF /* AssociatedObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssociatedObject.swift; sourceTree = "<group>"; };
+		87339EDF1D3AEFC60049CAEF /* Retainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Retainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +76,8 @@
 			isa = PBXGroup;
 			children = (
 				87339EC61D3AE5D50049CAEF /* AssociatedObject.h */,
+				87339EDD1D3AE7770049CAEF /* AssociatedObject.swift */,
+				87339EDF1D3AEFC60049CAEF /* Retainer.swift */,
 				87339EC81D3AE5D50049CAEF /* Info.plist */,
 			);
 			path = AssociatedObject;
@@ -194,6 +200,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87339EDE1D3AE7770049CAEF /* AssociatedObject.swift in Sources */,
+				87339EE01D3AEFC60049CAEF /* Retainer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +315,8 @@
 		87339ED81D3AE5D50049CAEF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -319,12 +329,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = sj.AssociatedObject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		87339ED91D3AE5D50049CAEF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

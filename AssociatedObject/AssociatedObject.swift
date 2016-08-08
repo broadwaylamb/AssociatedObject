@@ -12,9 +12,9 @@ public final class AssociatedObject {
     
     private static var associatedObjects = [Address : Retainer]()
     
-    public static func set<T>(for instance: AnyObject, forKey key: String, value: T) {
+    public static func set<Value>(for instance: AnyObject, forKey key: String, value: Value) {
         
-        let addressOfInstance: Address = unsafeAddressOf(instance)
+        let addressOfInstance: Address = unsafeAddress(of: instance)
         
         if associatedObjects[addressOfInstance] == nil {
             associatedObjects[addressOfInstance] = Retainer()
@@ -24,10 +24,10 @@ public final class AssociatedObject {
         associatedObjects[addressOfInstance]!.properties[key] = value
     }
     
-    public static func get<T>(for instance: AnyObject, forKey key: String) -> T? {
+    public static func get<Value>(for instance: AnyObject, forKey key: String) -> Value? {
         
-        let addressOfInstance: Address = unsafeAddressOf(instance)
+        let addressOfInstance: Address = unsafeAddress(of: instance)
         
-        return associatedObjects[addressOfInstance]?.properties[key] as? T
+        return associatedObjects[addressOfInstance]?.properties[key] as? Value
     }
 }
